@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --paper: #f8f9fa;
+  --ink: #101010;
+  --muted-ink: #343434;
+  --grid: rgba(16, 16, 16, 0.16);
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+}
+
+.dark {
+  color-scheme: dark;
+  --paper: #111111;
+  --ink: #f8f9fa;
+  --muted-ink: #d8d8d8;
+  --grid: rgba(248, 249, 250, 0.13);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(var(--grid) 2px, transparent 2px),
+    linear-gradient(90deg, var(--grid) 2px, transparent 2px),
+    var(--paper);
+  background-size: 36px 36px;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+body::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.13;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%),
+    radial-gradient(circle at center, rgba(16, 16, 16, 0.18) 1px, transparent 1px);
+  background-size:
+    100% 4px,
+    6px 6px;
+  mix-blend-mode: multiply;
+}
+
+.dark body::before {
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+
+::selection {
+  background: #ffd93d;
+  color: #101010;
+}
+
+@layer base {
+  * {
+    @apply border-ink;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    @apply border-4 border-ink dark:border-paper;
+  }
+
+  .brutal-card {
+    @apply brutal-border bg-paper text-ink shadow-brutal transition-transform duration-200 dark:bg-ink dark:text-paper dark:shadow-brutal-dark;
+  }
+
+  .section-shell {
+    @apply relative z-10 mx-auto w-full max-w-7xl scroll-mt-32 px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+  }
+
+  .doodle-label {
+    @apply inline-flex items-center border-4 border-ink bg-brutal-yellow px-3 py-1 font-display text-sm font-black uppercase text-ink shadow-brutal-sm;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .clip-stamp {
+    clip-path: polygon(5% 0, 100% 4%, 95% 100%, 0 92%);
+  }
+
+  .clip-ticket {
+    clip-path: polygon(0 0, 96% 0, 100% 18%, 96% 100%, 0 100%, 4% 82%, 0 64%, 4% 48%, 0 30%);
+  }
+
+  .hard-gradient {
+    background:
+      linear-gradient(135deg, #ffd93d 0 32%, transparent 32% 39%, #4d96ff 39% 64%, #ff6b6b 64% 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
