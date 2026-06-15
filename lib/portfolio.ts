@@ -10,7 +10,9 @@ import {
   LineChart,
   Link2,
   Mail,
+  Medal,
   Rocket,
+  ServerCog,
   ShieldCheck,
   Trophy,
   Wrench,
@@ -372,6 +374,18 @@ export const education = {
 
 export const experience = [
   {
+    title: "Backend Developer Intern",
+    place: "BrainMint",
+    date: "May 2026 - Present",
+    location: "Remote",
+    body:
+      "Architected and deployed a scalable e-commerce backend supporting authentication, product management, order processing, and payment workflows. Implemented Razorpay payment integration and backend APIs using Node.js, Express.js, MongoDB, and Render.",
+    tech: ["Node.js", "Express.js", "MongoDB", "Render", "Razorpay", "REST APIs"],
+    icon: ServerCog,
+    color: "bg-brutal-yellow",
+    current: true,
+  },
+  {
     title: "AI Deployment & Automation Intern",
     place: "EduSkills Foundation",
     date: "January 2026 - March 2026",
@@ -423,6 +437,30 @@ export const certifications = [
 ];
 
 export const achievements = [
+  {
+    group: "1st Runner Up",
+    title: "Hack the Knight (DayZero 2.0)",
+    team: "ELIXIS",
+    role: "AI/ML Developer",
+    detail:
+      "Built and deployed the machine learning pipeline and backend infrastructure for the team solution. Collaborated with teammates to deliver a functional system under hackathon constraints and secured 1st Runner Up.",
+    icon: Trophy,
+    color: "bg-brutal-yellow",
+    badgeColor: "bg-brutal-pink text-white",
+    featured: true,
+  },
+  {
+    group: "Finalist",
+    title: "Watch The Code 2026",
+    team: "FAIV",
+    role: "AI/ML Developer",
+    detail:
+      "Designed, trained, and deployed the machine learning pipeline while contributing to backend integration. Progressed through multiple competitive rounds involving ideation, MVP development, and technical evaluation to reach the finalist stage.",
+    icon: Medal,
+    color: "bg-brutal-blue",
+    badgeColor: "bg-brutal-yellow text-ink",
+    featured: true,
+  },
   {
     group: "Awards",
     title: "Techknow 2024-2025 Award Winner",

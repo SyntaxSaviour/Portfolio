@@ -16,6 +16,8 @@ export function AchievementsSection() {
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {achievements.map((item, index) => {
           const Icon = item.icon;
+          const isFeatured = item.featured;
+
           return (
             <motion.article
               key={item.title}
@@ -23,19 +25,55 @@ export function AchievementsSection() {
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ type: "spring", stiffness: 140, damping: 18, delay: index * 0.04 }}
-              whileHover={{ y: -7 }}
-              className={`border-4 border-ink ${item.color} p-5 text-ink shadow-brutal-sm dark:border-paper`}
+              whileHover={{ y: isFeatured ? -9 : -7, rotate: isFeatured ? (index % 2 ? -1 : 1) : 0 }}
+              className={`border-ink ${item.color} text-ink transition-all dark:border-paper ${
+                isFeatured
+                  ? "border-[6px] p-6 shadow-brutal md:min-h-[320px] xl:col-span-2"
+                  : "border-4 p-5 shadow-brutal-sm"
+              }`}
             >
-              <div className="flex items-center justify-between gap-3">
-                <span className="border-2 border-ink bg-paper px-2 py-1 font-display text-[11px] font-black uppercase">
+              <div className="flex items-start justify-between gap-4">
+                <span
+                  className={`border-2 border-ink bg-paper font-display font-black uppercase shadow-brutal-sm ${
+                    isFeatured ? "px-3 py-2 text-sm" : "px-2 py-1 text-[11px]"
+                  }`}
+                >
                   {item.group}
                 </span>
-                <Icon className="h-7 w-7" />
+                <div
+                  className={`flex shrink-0 items-center justify-center border-4 border-ink shadow-brutal-sm ${
+                    isFeatured
+                      ? `h-16 w-16 -rotate-2 ${item.badgeColor}`
+                      : "h-10 w-10 bg-paper"
+                  }`}
+                >
+                  <Icon className={isFeatured ? "h-9 w-9" : "h-6 w-6"} />
+                </div>
               </div>
-              <h3 className="mt-5 font-display text-2xl font-black uppercase leading-tight">
+              <h3
+                className={`font-display font-black uppercase leading-tight ${
+                  isFeatured ? "mt-6 text-3xl sm:text-4xl" : "mt-5 text-2xl"
+                }`}
+              >
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm font-bold leading-relaxed">{item.detail}</p>
+              {item.team || item.role ? (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {item.team ? (
+                    <span className="border-2 border-ink bg-paper px-2 py-1 font-display text-[11px] font-black uppercase shadow-brutal-sm">
+                      Team: {item.team}
+                    </span>
+                  ) : null}
+                  {item.role ? (
+                    <span className="border-2 border-ink bg-ink px-2 py-1 font-display text-[11px] font-black uppercase text-paper shadow-brutal-sm">
+                      {item.role}
+                    </span>
+                  ) : null}
+                </div>
+              ) : null}
+              <p className={`mt-3 font-bold leading-relaxed ${isFeatured ? "text-base" : "text-sm"}`}>
+                {item.detail}
+              </p>
             </motion.article>
           );
         })}
