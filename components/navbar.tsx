@@ -29,7 +29,7 @@ export function Navbar() {
           href="#home"
           className="flex min-h-12 items-center border-4 border-ink bg-brutal-yellow px-3 font-display text-lg font-black uppercase text-ink shadow-brutal-sm transition-transform hover:-rotate-1 dark:border-paper sm:min-h-14 sm:px-5 sm:text-2xl"
         >
-          FARZAN.EXE
+          FARJAN.EXE
         </a>
 
         <div className="hidden items-center gap-2 lg:flex">

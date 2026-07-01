@@ -123,7 +123,7 @@ export function HeroSection() {
           <div className="relative rotate-[-1.5deg] overflow-hidden border-[6px] border-ink bg-white p-3 shadow-brutal-lg dark:border-paper">
             <Image
               src={profile.image}
-              alt="Portrait of Farzan"
+              alt="Portrait of Farjan"
               width={700}
               height={700}
               priority

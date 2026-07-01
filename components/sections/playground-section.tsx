@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Keyboard, Send, Sparkles } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { askFarzan } from "@/lib/portfolio";
+import { askFarjan } from "@/lib/portfolio";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -31,7 +31,7 @@ export function PlaygroundSection() {
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setVisibleLogs((value) => Math.min(value + 1, askFarzan.logs.length));
+      setVisibleLogs((value) => Math.min(value + 1, askFarjan.logs.length));
     }, 360);
 
     return () => window.clearInterval(timer);
@@ -43,7 +43,7 @@ export function PlaygroundSection() {
       setProcessing(false);
       setTypedResponse("");
       let cursor = 0;
-      const answer = askFarzan.prompts[active].a;
+      const answer = askFarjan.prompts[active].a;
 
       typingTimer = window.setInterval(() => {
         cursor += 2;
@@ -81,7 +81,7 @@ export function PlaygroundSection() {
     <section className="section-shell">
       <SectionHeading
         eyebrow="Interactive"
-        title="Ask Farzan.exe"
+        title="Ask Farjan.exe"
         kicker="A terminal-style interface inspired by how I think about systems, AI, and building things."
       />
 
@@ -98,7 +98,7 @@ export function PlaygroundSection() {
             <Keyboard className="h-5 w-5" />
           </div>
           <div className="min-h-72 space-y-3 font-mono text-sm font-bold">
-            {askFarzan.logs.map((log, index) => (
+            {askFarjan.logs.map((log, index) => (
               <motion.p
                 key={log}
                 initial={{ opacity: 0, x: -12 }}
@@ -117,7 +117,7 @@ export function PlaygroundSection() {
               transition={{ duration: 1.1, repeat: Infinity }}
               className="pt-3 text-brutal-yellow"
             >
-              [{String(askFarzan.logs.length + 1).padStart(2, "0")}] listener online_
+              [{String(askFarjan.logs.length + 1).padStart(2, "0")}] listener online_
             </motion.p>
             {secret ? (
               <motion.div
@@ -139,7 +139,7 @@ export function PlaygroundSection() {
           className="brutal-card bg-brutal-blue p-5 text-ink"
         >
           <div className="flex flex-wrap gap-3">
-            {askFarzan.prompts.map((prompt, index) => (
+            {askFarjan.prompts.map((prompt, index) => (
               <Button
                 key={prompt.label}
                 variant={active === index ? "yellow" : "paper"}
@@ -154,7 +154,7 @@ export function PlaygroundSection() {
           <div className="mt-6 border-4 border-ink bg-paper p-5 shadow-brutal-sm">
             <div className="mb-4 flex items-center gap-2 font-display text-sm font-black uppercase">
               <Sparkles className="h-5 w-5" />
-              ask_farzan.exe response
+              ask_farjan.exe response
             </div>
             <AnimatePresence mode="wait">
               {processing ? (
@@ -169,7 +169,7 @@ export function PlaygroundSection() {
                 </motion.div>
               ) : (
                 <motion.p
-                  key={askFarzan.prompts[active].label}
+                  key={askFarjan.prompts[active].label}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -16 }}
@@ -184,7 +184,7 @@ export function PlaygroundSection() {
           </div>
 
           <div className="mt-5 flex items-center gap-3 border-4 border-ink bg-ink p-3 text-paper shadow-brutal-sm">
-            <span className="font-mono text-sm font-bold">$ ask --topic {askFarzan.prompts[active].q}</span>
+            <span className="font-mono text-sm font-bold">$ ask --topic {askFarjan.prompts[active].q}</span>
             <span className="animate-blink font-mono">_</span>
             <Send className="ml-auto h-5 w-5 text-brutal-green" />
           </div>

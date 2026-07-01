@@ -9,7 +9,7 @@ set "URL=http://%HOST%:%PORT%"
 
 echo.
 echo ==========================================
-echo   Farzan Brutalist Portfolio Launcher
+echo   Farjan Brutalist Portfolio Launcher
 echo ==========================================
 echo.
 

@@ -1,6 +1,6 @@
-# Farzan Brutalist Portfolio
+# Farjan Brutalist Portfolio
 
-A fully responsive Neo-Brutalist personal portfolio for Farzan, built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, Lucide React, next-themes, and shadcn-style reusable UI primitives.
+A fully responsive Neo-Brutalist personal portfolio for Farjan, built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, Lucide React, next-themes, and shadcn-style reusable UI primitives.
 
 ## Highlights
 
@@ -55,8 +55,8 @@ Update this file to change projects, links, skills, timeline entries, research c
 Assets live in:
 
 ```txt
-public/assets/farzan-profile.jpg
-public/assets/Farzan_Resume.pdf
+public/assets/farjan-profile.jpg
+public/assets/Farjan_Resume.pdf
 ```
 
-The resume PDF lists the name as `Farjan Alam`; the site displays `Farzan` because that was requested in the build brief.
+The resume PDF lists the name as `Farjan Alam`; the site displays `Farjan`.

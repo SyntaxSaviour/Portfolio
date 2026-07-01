@@ -15,7 +15,7 @@ export function ContactSection() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const subject = encodeURIComponent(`Portfolio hello from ${name || "someone interesting"}`);
-    const body = encodeURIComponent(message || "Hey Farzan, I saw your portfolio and wanted to connect.");
+    const body = encodeURIComponent(message || "Hey Farjan, I saw your portfolio and wanted to connect.");
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
   };
 
@@ -82,7 +82,7 @@ export function ContactSection() {
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 className="min-h-48 resize-y border-4 border-ink bg-white px-4 py-3 font-bold text-ink shadow-brutal-sm outline-none focus:bg-brutal-yellow dark:border-paper"
-                placeholder="Tell Farzan what you are building..."
+                placeholder="Tell Farjan what you are building..."
               />
             </label>
             <Button type="submit" variant="pink" size="lg" className="w-full">

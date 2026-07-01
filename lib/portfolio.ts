@@ -19,14 +19,14 @@ import {
 } from "lucide-react";
 
 export const profile = {
-  name: "Farzan",
+  name: "Farjan",
   resumeName: "Farjan Alam",
   title: "AI & Machine Learning Sophomore at SRMIST",
   location: "Chennai, Tamil Nadu, India",
   email: "farjanalam16@gmail.com",
   phone: "+91 8100511088",
-  image: "/assets/farzan-profile.jpg",
-  resume: "/assets/Farzan_Resume.pdf",
+  image: "/assets/farjan-profile.jpg",
+  resume: "/assets/Farjan_Resume.pdf",
   site: "https://alamfarjan.lovable.app",
   subtitles: [
     "AI/ML Engineer",
@@ -537,9 +537,9 @@ export const openTo = [
   },
 ];
 
-export const askFarzan = {
+export const askFarjan = {
   logs: [
-    "booting farzan.exe",
+    "booting farjan.exe",
     "loading transformer interpretability modules",
     "syncing Kaggle experiment shelf",
     "calibrating autonomous sensing concepts",

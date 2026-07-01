@@ -18,13 +18,13 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alamfarjan.lovable.app"),
   title: {
-    default: "Farzan | AI/ML Engineer Portfolio",
-    template: "%s | Farzan",
+    default: "Farjan | AI/ML Engineer Portfolio",
+    template: "%s | Farjan",
   },
   description:
-    "Neo-Brutalist AI/ML portfolio for Farzan, focused on applied ML builds, interpretable systems, and research-minded experiments.",
+    "Neo-Brutalist AI/ML portfolio for Farjan, focused on applied ML builds, interpretable systems, and research-minded experiments.",
   keywords: [
-    "Farzan",
+    "Farjan",
     "Farjan Alam",
     "AI ML Engineer",
     "Machine Learning",
@@ -34,20 +34,20 @@ export const metadata: Metadata = {
     "TensorFlow",
     "PyTorch",
   ],
-  authors: [{ name: "Farzan" }],
+  authors: [{ name: "Farjan" }],
   openGraph: {
-    title: "Farzan | AI/ML Engineer Portfolio",
+    title: "Farjan | AI/ML Engineer Portfolio",
     description:
       "A brutalist digital lab for AI/ML builds, experimental systems, and technical curiosity.",
     type: "website",
-    images: ["/assets/farzan-profile.jpg"],
+    images: ["/assets/farjan-profile.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Farzan | AI/ML Engineer Portfolio",
+    title: "Farjan | AI/ML Engineer Portfolio",
     description:
       "AI/ML engineering portfolio with flagship builds, research playgrounds, and playful brutalist motion.",
-    images: ["/assets/farzan-profile.jpg"],
+    images: ["/assets/farjan-profile.jpg"],
   },
 };
 

@@ -1,8 +1,8 @@
 {
-  "name": "farzan-brutalist-portfolio",
+  "name": "farjan-brutalist-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "A Neo-Brutalist AI/ML engineering portfolio for Farzan.",
+  "description": "A Neo-Brutalist AI/ML engineering portfolio for Farjan.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
